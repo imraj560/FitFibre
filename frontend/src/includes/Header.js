@@ -33,11 +33,6 @@ const Header = ()=>{
                                 Profile
                             </NavLink>
                         </Nav.Link>
-                        <Nav.Link href="#link">
-                            <NavLink to={'/profile'}>
-                                Profile
-                            </NavLink>
-                        </Nav.Link>
                         
                     </Nav>
                     </Navbar.Collapse>

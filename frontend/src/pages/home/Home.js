@@ -3,12 +3,11 @@ import {Row, Col, Card, Container} from 'react-bootstrap'
 import { Airplane } from 'react-bootstrap-icons';
 import { TreeFill } from 'react-bootstrap-icons';
 import { Cake } from 'react-bootstrap-icons';
-import demoImage from '../../assets/images/home_banner.jpg'
 import Layout from '../../layout/layout';
 
 import './Home.css'
 
-
+const imgSource = `${process.env.PUBLIC_URL}assets/images/home_banner.jpg`;
 
 const Home = ()=>{
 
@@ -55,7 +54,7 @@ const Home = ()=>{
             <p>Recently Visited</p>
             <Col md={3} style={{display:'flex', justifyContent:'center'}}>
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={demoImage} />
+                <Card.Img variant="top" src={imgSource} />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
@@ -67,7 +66,7 @@ const Home = ()=>{
             </Col>
             <Col md={3} style={{display:'flex', justifyContent:'center'}}>
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={demoImage} />
+                <Card.Img variant="top" src={imgSource} />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
@@ -79,7 +78,7 @@ const Home = ()=>{
             </Col>
             <Col md={3} style={{display:'flex', justifyContent:'center'}}>
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={demoImage} />
+                <Card.Img variant="top" src={imgSource} />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
@@ -92,7 +91,7 @@ const Home = ()=>{
 
             <Col md={3} style={{display:'flex', justifyContent:'center'}}>
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={demoImage} />
+                <Card.Img variant="top" src={imgSource} />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
@@ -110,7 +109,7 @@ const Home = ()=>{
             <p>Most Popular Food</p>
             <Col md={3} style={{display:'flex', justifyContent:'center'}}>
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={demoImage} />
+                <Card.Img variant="top" src={imgSource} />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
@@ -122,7 +121,7 @@ const Home = ()=>{
             </Col>
             <Col md={3} style={{display:'flex', justifyContent:'center'}}>
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={demoImage} />
+                <Card.Img variant="top" src={imgSource} />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
@@ -134,7 +133,7 @@ const Home = ()=>{
             </Col>
             <Col md={3} style={{display:'flex', justifyContent:'center'}}>
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={demoImage} />
+                <Card.Img variant="top" src={imgSource} />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
@@ -147,7 +146,7 @@ const Home = ()=>{
 
             <Col md={3} style={{display:'flex', justifyContent:'center'}}>
               <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={demoImage} />
+                <Card.Img variant="top" src={imgSource} />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
