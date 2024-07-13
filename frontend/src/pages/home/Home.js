@@ -1,9 +1,10 @@
-import {Container, Nav, Navbar, NavDropdown} from 'react-bootstrap'
-import {Row, Col, Card} from 'react-bootstrap'
+
+import {Row, Col, Card, Container} from 'react-bootstrap'
 import { Airplane } from 'react-bootstrap-icons';
 import { TreeFill } from 'react-bootstrap-icons';
 import { Cake } from 'react-bootstrap-icons';
 import demoImage from '../../assets/images/home_banner.jpg'
+import Layout from '../../layout/layout';
 
 import './Home.css'
 
@@ -14,22 +15,8 @@ const Home = ()=>{
     return (
 
       <>
-        <Navbar expand="lg" className="bg-body-tertiary">
-          <Container>
-            <Navbar.Brand href="#home">My Back Yard</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#link">About</Nav.Link>
-                <Nav.Link href="#link">Contact</Nav.Link>
-                <Nav.Link href="#link">Login</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Container>
-        </Navbar>
-
-        <Container className='mt-5'>
+        <Layout>
+          <Container className='mt-1'>
           <Row>
             <Col id="home_banner" md={12}>
             <h2>Places are a reflection to your heart</h2>
@@ -175,6 +162,8 @@ const Home = ()=>{
           </Row>
 
         </Container>
+        </Layout>
+        
 
 
 

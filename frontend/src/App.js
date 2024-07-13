@@ -1,5 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/home/Home'
+import Login from './pages/login/login';
+import Register from './pages/register/Register';
+import Profile from './pages/profile/Profile';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = ()=>{
@@ -11,6 +14,9 @@ const App = ()=>{
       <Routes>
 
         <Route path="/" element={<Home/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/register" element={<Register/>} />
+        <Route path="/profile" element={<Profile/>} />
 
       </Routes>
 
