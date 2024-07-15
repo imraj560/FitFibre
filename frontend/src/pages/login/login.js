@@ -1,4 +1,6 @@
 import { Container, Form, Group, Button, Row, Col } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import { ArrowLeft } from "react-bootstrap-icons";
 import "./login.css"
 
 const Login = ()=>{
@@ -10,6 +12,7 @@ const Login = ()=>{
 
                 <Row id="loginRow">
                     <Col className="shadow-sm mb-5 bg-body rounded" style={{padding:'25px', background:'#fbf8f8', borderRadius:'5px'}} md={6}>
+                        <NavLink to="/"><ArrowLeft className="mb-3"></ArrowLeft></NavLink>
                         <h2 style={{fontSize:'20px',fontWeight:'500', marginBottom:'30px'}}>Welcome Back</h2>
                         <Form>
                             <Form.Group className="mb-3" controlId="formBasicEmail">

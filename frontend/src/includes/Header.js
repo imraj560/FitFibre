@@ -11,13 +11,19 @@ const Header = ()=>{
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
-                    <Navbar.Brand href="#home">My Back Yard</Navbar.Brand>
+                    <Navbar.Brand href="#home">
+                    <NavLink to={'/'}>
+                            My Back Yard
+                    </NavLink>
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="#link">About</Nav.Link>
-                        <Nav.Link href="#link">Contact</Nav.Link>
+                        <Nav.Link href="#home">
+                        <NavLink to={'/'}>
+                                Home
+                            </NavLink>
+                        </Nav.Link>
                         <Nav.Link href="#link">
                             <NavLink to={'/login'}>
                                 Login
