@@ -1,4 +1,5 @@
-import { Row, Container, Col, Card, Button, Accordion} from 'react-bootstrap';
+import { Row, Container, Col, Card, Button, Accordion, Form} from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import Layout from '../../layout/layout';
 
 const Profile = ()=>{
@@ -15,8 +16,21 @@ const Profile = ()=>{
                 <Row className='mt-4'>
                     <h2 style={{fontSize:'30px', fontWeight:'400'}}>Hi Raju :)</h2>
                 </Row>
+               
                 <Row className='mt-4'>
                     <Col md={8}>
+                        <Row className='mb-4'>
+                            <Col md={3}>
+                                <Button className='w-100' variant='secondary'>
+                                    <NavLink to={'/add'}>
+                                        Post Attraction
+                                    </NavLink>
+                                </Button>
+                            </Col>
+                            <Col md={9}>
+                                <Form.Control className='w-100' type="search" placeholder="search place" />
+                            </Col>
+                        </Row>
                         <Row>
                             <h2 style={{fontSize:'20px', fontWeight:'400'}}>Recent Places</h2>
                             <Col md={4}>
