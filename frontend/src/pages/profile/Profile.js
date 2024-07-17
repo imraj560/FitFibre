@@ -1,5 +1,6 @@
-import { Row, Container, Col, Card, Button, Accordion, Form} from 'react-bootstrap';
+import { Row, Container, Col, Card, Button, Accordion, Form, ListGroup} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import { ArrowThroughHeartFill, BanFill } from 'react-bootstrap-icons';
 import Layout from '../../layout/layout';
 
 const Profile = ()=>{
@@ -23,98 +24,85 @@ const Profile = ()=>{
                             <Col md={3}>
                                 <Button className='w-100' variant='secondary'>
                                     <NavLink to={'/add'}>
-                                        Post Attraction
+                                        Create New Meal
                                     </NavLink>
                                 </Button>
                             </Col>
                             <Col md={9}>
-                                <Form.Control className='w-100' type="search" placeholder="search place" />
+                                <Form.Control className='w-100' type="search" placeholder="search meal" />
                             </Col>
                         </Row>
                         <Row>
-                            <h2 style={{fontSize:'20px', fontWeight:'400'}}>Recent Places</h2>
+                            <h2 style={{fontSize:'20px', fontWeight:'400'}}>Recent Meals</h2>
                             <Col md={4}>
                                 <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src={imgSrc1} />
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Img variant="top" src={`${process.env.PUBLIC_URL}assets/images/protein oats.jpg`} />
+                                    <Card.Body>
+                                    <Card.Title>Protein Oats</Card.Title>
                                     <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                        This oats receipe is full of fibres and protein, it will easily fill you up to get
+                                        your day started
                                     </Card.Text>
-                                    <Button variant="secondary">Take a look</Button>
+                                    </Card.Body>
+
+                                    <ListGroup className="list-group-flush">
+                                    <ListGroup.Item><ArrowThroughHeartFill/> Calories:  300 Cal</ListGroup.Item>
+                                    <ListGroup.Item><BanFill/> Protein: 40g</ListGroup.Item>
+                                    </ListGroup>
+
+                                    <Card.Body>
+                                    <Card.Link href="#">Read more</Card.Link>
                                 </Card.Body>
+                                
                                 </Card>
                             </Col>
                             <Col md={4}>
-                                <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src={imgSrc2} />
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
+                            <Card style={{ width: '18rem' }}>
+                                    <Card.Img variant="top" src={`${process.env.PUBLIC_URL}assets/images/healthybiryani.jpg`} />
+                                    <Card.Body>
+                                    <Card.Title>Healthy Biryani</Card.Title>
                                     <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
+                                        Trust me it does not get better than this, it will take care of your macros whilst
+                                        fullfulling your desire.
                                     </Card.Text>
-                                    <Button variant="secondary">Take a look</Button>
+                                    </Card.Body>
+
+                                    <ListGroup className="list-group-flush">
+                                    <ListGroup.Item><ArrowThroughHeartFill/> Calories:  400 Cal</ListGroup.Item>
+                                    <ListGroup.Item><BanFill/> Protein: 60</ListGroup.Item>
+                                    </ListGroup>
+
+                                    <Card.Body>
+                                    <Card.Link href="#">Read more</Card.Link>
                                 </Card.Body>
-                                </Card>
-                            </Col> 
-                            <Col md={4}>
-                                <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src={imgSrc3} />
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                    </Card.Text>
-                                    <Button variant="secondary">Take a look</Button>
-                                </Card.Body>
-                                </Card>
-                            </Col>  
-                        </Row>
-                        <Row className='mt-5'>
-                            <h2 style={{fontSize:'20px', fontWeight:'400'}}>Popular Food</h2>
-                            <Col md={4}>
-                                <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src={imgSrc1} />
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                    </Card.Text>
-                                    <Button variant="secondary">Take a look</Button>
-                                </Card.Body>
+                                
                                 </Card>
                             </Col>
+
                             <Col md={4}>
-                                <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src={imgSrc2} />
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src={`${process.env.PUBLIC_URL}assets/images/proteinsmoothie.jpg`} />
                                 <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                    </Card.Text>
-                                    <Button variant="secondary">Take a look</Button>
+                                <Card.Title>Protein Smoothie</Card.Title>
+                                <Card.Text>
+                                    This protein smoothie is very filling, its very easy to make and its perfect for an
+                                    afternoon snack
+                                </Card.Text>
                                 </Card.Body>
-                                </Card>
-                            </Col> 
-                            <Col md={4}>
-                                <Card style={{ width: '18rem' }}>
-                                <Card.Img variant="top" src={imgSrc3} />
+
+                                <ListGroup className="list-group-flush">
+                                <ListGroup.Item><ArrowThroughHeartFill/> Calories:  150 Cal</ListGroup.Item>
+                                <ListGroup.Item><BanFill/> Protein: 30g</ListGroup.Item>
+                                </ListGroup>
+
                                 <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Text>
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                    </Card.Text>
-                                    <Button variant="secondary">Take a look</Button>
-                                </Card.Body>
-                                </Card>
+                                <Card.Link href="#">Read more</Card.Link>
+                            </Card.Body>
+                            
+                            </Card>
                             </Col>  
                         </Row>
+                
                         
                     </Col>
                     <Col md={4}>

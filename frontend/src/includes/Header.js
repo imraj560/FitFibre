@@ -13,7 +13,7 @@ const Header = ()=>{
                 <Container>
                     <Navbar.Brand href="#home">
                     <NavLink to={'/'}>
-                            My Back Yard
+                            Fit Fibre
                     </NavLink>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
