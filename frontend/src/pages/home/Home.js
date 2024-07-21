@@ -5,6 +5,7 @@ import { TreeFill } from 'react-bootstrap-icons';
 import { PersonArmsUp } from 'react-bootstrap-icons';
 import { ArrowThroughHeartFill, BanFill } from 'react-bootstrap-icons';
 import Layout from '../../layout/layout';
+import { NavLink } from 'react-router-dom';
 
 import './Home.css'
 
@@ -20,6 +21,7 @@ const Home = ()=>{
           <Row>
             <Col id="home_banner" md={12}>
             <h2>Healthy food was never easier to find</h2>
+            <Button className='rounded-0' variant='secondary' size='lg'>Food Store</Button>
             </Col>
           </Row>
 
@@ -42,13 +44,11 @@ const Home = ()=>{
           </Row>
 
           <Row id="intro" className='mt-5'>
-            <Col md={12} className='text-center'>
+            <Col md={12} className='text-center px-5'>
             <p>Fitness has alaways been a part of my identity and I beleive it is related to everything we do 
               through out our lives. A fitbody is a testament to a fit mind which in turn helps you out tremendoulsy
               in your daily lives. It creates a better impression onto other people that you are serious about your
-              business and goals and that they can trust you to deliver in an quality of excellent caliber. Remember
-              a fit body alaways requires a strong mind and a strong mind is necessary to create excellence in 
-              business.
+              business and goals and that they can trust you to deliver in an quality of excellent caliber.
             </p>
             </Col>
           </Row>
@@ -139,7 +139,7 @@ const Home = ()=>{
                 </ListGroup>
 
                 <Card.Body>
-                <Card.Link href="#">Read more</Card.Link>
+                <Card.Link><NavLink to={'/meal'}>Read More</NavLink></Card.Link>
               </Card.Body>
                
               </Card>

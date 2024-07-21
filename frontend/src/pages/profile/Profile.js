@@ -1,6 +1,6 @@
 import { Row, Container, Col, Card, Button, Accordion, Form, ListGroup} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import { ArrowThroughHeartFill, BanFill } from 'react-bootstrap-icons';
+import { ArrowThroughHeartFill, BanFill, Activity, Fire, Basket } from 'react-bootstrap-icons';
 import Layout from '../../layout/layout';
 
 const Profile = ()=>{
@@ -24,7 +24,7 @@ const Profile = ()=>{
                             <Col md={3}>
                                 <Button className='w-100' variant='secondary'>
                                     <NavLink to={'/add'}>
-                                        Create New Meal
+                                        <Basket/> Customize Meal
                                     </NavLink>
                                 </Button>
                             </Col>
@@ -33,7 +33,14 @@ const Profile = ()=>{
                             </Col>
                         </Row>
                         <Row>
-                            <h2 style={{fontSize:'20px', fontWeight:'400'}}>Recent Meals</h2>
+                        <h2 style={{fontSize:'20px', fontWeight:'400'}}>Caloric Expenditure</h2>
+                            <Col md={6}>
+                                <Button className='mx-1' variant='danger'><Activity/> 2300 Cal</Button>
+                                <Button variant='success'><Fire/> 800 Cal</Button>
+                            </Col>
+                        </Row>
+                        <Row className='mt-4'>
+                            <h2 style={{fontSize:'20px', fontWeight:'400'}}>Your Meal Plan</h2>
                             <Col md={4}>
                                 <Card style={{ width: '18rem' }}>
                                     <Card.Img variant="top" src={`${process.env.PUBLIC_URL}assets/images/protein oats.jpg`} />
@@ -102,6 +109,33 @@ const Profile = ()=>{
                             </Card>
                             </Col>  
                         </Row>
+
+                        <Row className='mt-4'>
+                            <h2 style={{fontSize:'20px', fontWeight:'400'}}>Latest Recipes</h2>
+                            <Col md={4}>
+                                <Card style={{ width: '18rem' }}>
+                                <Card.Img variant="top" src={`${process.env.PUBLIC_URL}assets/images/chickenbreast.jpg`} />
+                                <Card.Body>
+                                <Card.Title>Chicken Breast</Card.Title>
+                                <Card.Text>
+                                    This delicious dinner consists of chicken breast with sauted vegetables, this amazing
+                                    dinner will put an stop to your midnight cravings
+                                </Card.Text>
+                                </Card.Body>
+
+                                <ListGroup className="list-group-flush">
+                                <ListGroup.Item><ArrowThroughHeartFill/> Calories:  450 Cal</ListGroup.Item>
+                                <ListGroup.Item><BanFill/> Protein: 70</ListGroup.Item>
+                                </ListGroup>
+
+                                <Card.Body>
+                                <Card.Link href="#">Read more</Card.Link>
+                            </Card.Body>
+                            
+                            </Card>
+                            </Col>
+                        
+                        </Row>
                 
                         
                     </Col>
@@ -113,9 +147,8 @@ const Profile = ()=>{
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header>Adam</Accordion.Header>
                                     <Accordion.Body>
-                                    Hi Raju, I just wanted to ask you about this places, regarding what
-                                    flight you took to get there and what was the price. Get back to me
-                                    at your convenience, take care.
+                                    Hi Raju, could you give me more details about this receipe you are using for your
+                                    breakfast
                                     </Accordion.Body>
                                 </Accordion.Item>
                                 <Accordion.Item eventKey="1">
@@ -155,6 +188,13 @@ const Profile = ()=>{
                                     </Accordion.Body>
                                 </Accordion.Item>
                             </Accordion>
+                            </Col>
+                        </Row>
+                        <Row className='mt-2'>
+                            <Col md={12}>
+                                <Button className='text-gray' variant='dark' size='lg'>
+                                    <Fire /> Calculate Calories
+                                </Button>
                             </Col>
                         </Row>
                     </Col>
