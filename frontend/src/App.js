@@ -4,6 +4,7 @@ import Login from './pages/login/login';
 import Register from './pages/register/Register';
 import Profile from './pages/profile/Profile';
 import Add from './pages/add/Add';
+import Meal from './pages/meal/Meal';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = ()=>{
@@ -18,6 +19,7 @@ const App = ()=>{
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
         <Route path="/profile" element={<Profile/>} />
+        <Route path="/meal" element={<Meal/>} />
         <Route path="/add" element={<Add/>} />
 
       </Routes>
