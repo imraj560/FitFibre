@@ -1,8 +1,8 @@
 const express = require('express');
-const { allPlaces } = require('../controller/placeController');
+const { allMeals } = require('../controller/mealController');
 const router = express.Router();
 
-router.get('/', allPlaces);
+router.get('/', allMeals);
 
 
 module.exports = router;
