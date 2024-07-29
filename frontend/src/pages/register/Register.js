@@ -1,18 +1,31 @@
-import { Container, Form, Group, Button, Row, Col } from "react-bootstrap";
+import { Container, Form, Button, Row, Col } from "react-bootstrap";
 import { ArrowLeft } from "react-bootstrap-icons";
 import "./Register.css"
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import useSignUp from "../../hooks/useSignUp";
+
+
+
+
 
 const Register = ()=>{
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [cPassword, setCpassword] = useState('')
     const [name, setName] = useState('');
+    const {signup, error} = useSignUp();
+ 
 
-    const handleForm = ()=>{
 
-        alert('hello raju');
+    const handleForm = async(e)=>{
+
+        e.preventDefault()
+
+        await signup(name, email, password, cPassword);
+        
+        
     }
 
 
@@ -52,7 +65,7 @@ const Register = ()=>{
 
                             <Form.Group className="mb-3" controlId="formBasicPassword">
                                 <Form.Label>Confirm Password</Form.Label>
-                                <Form.Control required type="password" placeholder="confirm it" />
+                                <Form.Control onChange={(e)=>setCpassword(e.target.value)} required type="password" placeholder="confirm it" />
                                 <Form.Text className="text-muted">
                                 Just making sure your password matches
                                 </Form.Text>
@@ -61,6 +74,13 @@ const Register = ()=>{
                             <Button type="submit" variant="secondary" style={{borderRadius:'2px', marginTop:'20px'}}>
                                 Register
                             </Button>
+                            {error  &&
+                             <Col md={12} className="bg-gray mt-2">
+                                {error}
+                            </Col>
+                            
+                            }
+                           
                         </Form>
                     </Col>
                 </Row> 
